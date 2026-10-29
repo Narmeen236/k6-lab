@@ -20,8 +20,11 @@ All rules passed (http_req_failed: 0.00%, p(95)<1000, p(99)<1500). Measured p(95
 | A1 | Smoke | 1 | 0.4451 | 573.25ms | 579.78ms | 0.00% | 100.00% |
 | A2 | Average load | 3 | 1.26 | 539.22ms | 1.68s | 0.00% | 100.00% |
 | A3 | Stress | 5 | 2.12 | 508.14ms | 1.62s | 0.00% | 100.00% |
-| A4 | Spike | 5 | | | | | |
+| A4 | Spike | 5 | 1.01 | 524.52ms | 1.35s | 0.00% | 100.00% |
 | A5 | Soak | 2 | | | | | |
+
+- Step A4, did the response time rise during the spike, and how long did it take to return to its earlier level?
+Yes, max latency bumped up to 1.35s during the 1-to-5 VU spike. But p(95) stayed smooth at 524.52ms with zero errors (0% failed). Once users dropped back to 1, response times recovered to normal (~350ms) in about 6 seconds.
 
 ## Part B
 1. 
