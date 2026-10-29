@@ -10,7 +10,7 @@ The rate stays below 5 req/s because each iteration includes sleep(1) (1 second 
 Step 0.6, exit code of the normal run and of the run with P95=300: Normal run exit code: 0, Run with P95=300 exit code: 99 
 
 Step 0.7, rules that passed, p(95), p(99), exit code after your change: 
-
+All rules passed (http_req_failed: 0.00%, p(95)<1000, p(99)<1500). Measured p(95) = 677.43ms, p(99) = 760.5ms. Exit code after strict threshold change: 99.
 Step 0.8, what was wrong, and how the checks showed it: 
 
 ## Part A results
