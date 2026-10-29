@@ -7,7 +7,7 @@ Step 0.2, requests, rate and p(95), and why the rate stays below 5:
 Requests: 67, Rate: 3.17 req/s, p(95): 720.58ms.
 The rate stays below 5 req/s because each iteration includes sleep(1) (1 second think time) plus the HTTP request duration (~0.42s). One complete iteration for one virtual user takes about 1.42s, so 5 users running for 20 seconds can complete around 67 requests in total (~3.17 req/s).
 
-Step 0.6, exit code of the normal run and of the run with P95=300: 
+Step 0.6, exit code of the normal run and of the run with P95=300: Normal run exit code: 0, Run with P95=300 exit code: 99 
 
 Step 0.7, rules that passed, p(95), p(99), exit code after your change: 
 
