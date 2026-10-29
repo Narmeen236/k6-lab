@@ -41,7 +41,8 @@ The overall response time remained consistent around ~300ms-460ms between the in
 | `a3-stress.js` | 5 | 2.12 | 508.14ms | 1.62s | 0.00% | 100.00% |
 | `a4-spike.js` | 5 | 1.01 | 524.52ms | 1.35s | 0.00% | 100.00% |
 | `a5-soak.js` | 2 | 0.81 | 464.81ms | 1m0s | 0.92% | 99.16% |
-In Step 0.2, why was the request rate below 5 requests per second with 5 virtual users?
+
+2. In Step 0.2, why was the request rate below 5 requests per second with 5 virtual users?
 
 Because each iteration in the script included sleep times (pacing/think time) between requests, and network latency added to the total iteration duration. Since each VU takes several seconds to complete one full loop, 5 VUs cannot execute 5 requests every second.
 
